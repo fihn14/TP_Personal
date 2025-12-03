@@ -759,7 +759,7 @@ config.libs = [
             Object(MatchingFor(ALL_GCN), "d/d_insect.cpp"),
             Object(MatchingFor(ALL_GCN), "d/actor/d_a_obj_ss_base.cpp"),
             Object(MatchingFor(ALL_GCN), "d/actor/d_a_player.cpp"),
-            Object(NonMatching, "d/d_camera.cpp"),
+            Object(Modded, "d/d_camera.cpp"),  # Boofener: Modified for DELTA_TIME scaling
             Object(MatchingFor(ALL_GCN), "d/d_envse.cpp"),
             Object(MatchingFor(ALL_GCN), "d/d_file_select.cpp"),
             Object(MatchingFor(ALL_GCN), "d/d_file_sel_warning.cpp"),
@@ -1726,7 +1726,7 @@ config.libs = [
     ActorRel(MatchingFor(ALL_GCN), "d_a_vrbox"),
     ActorRel(NonMatching, "d_a_vrbox2"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_arrow"),
-    ActorRel(MatchingFor(ALL_GCN), "d_a_boomerang"),
+    ActorRel(Modded, "d_a_boomerang"),  # Boofener: Modified for DELTA_TIME scaling
     ActorRel(MatchingFor(ALL_GCN), "d_a_crod"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_demo00"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_disappear"),
