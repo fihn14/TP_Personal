@@ -11535,10 +11535,11 @@ BOOL daAlink_c::checkNextActionFromButton() {
     // Boofener: Instant transform with D-pad down
     if (mDoCPd_c::getTrigDown(PAD_1)) {
         if (!checkEventRun() && mProcID != PROC_METAMORPHOSE) {
-            // Check basic safety conditions then force transformation
+            // Check basic safety conditions and Master Sword flag (same as Z menu transformation)
             if (mLinkAcch.ChkGroundHit() &&
                 !checkModeFlg(MODE_PLAYER_FLY) &&
-                !checkMagneBootsOn()) {
+                !checkMagneBootsOn() &&
+                checkEndResetFlg0(ERFLG0_UNK_2)) {  // Boofener: Only allow transformation after Master Sword
                 return procCoMetamorphoseInit();
             }
         }
